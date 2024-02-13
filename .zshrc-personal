@@ -1,0 +1,63 @@
+###
+#Home Dir Cleaning
+compinit -d "$XDG_CACHE_HOME"/zsh/zcompdump-"$ZSH_VERSION" 
+alias wget=wget --hsts-file="$XDG_DATA_HOME/wget-hsts"
+# fix Backspace ssh problem for kitty terminal
+[[ "$TERM" == "xterm-kitty" ]] && alias ssh="kitty +kitten ssh"
+
+
+export EDITOR='nvim'
+export VISUAL='nvim'
+
+# tlrc - official tldr client
+alias fman='tldr'
+
+alias rm='rm -I --preserve-root'
+
+# fuzzy finding & open in default application
+alias fzf-open='(fzf --height 40% --reverse </dev/tty) | (xargs -I {} xdg-open {} &)'
+alias fzfo='fzf | (xargs -I {} xdg-open {} &)'
+# not recursive
+alias fo='find . -maxdepth 1 -type f | fzf | (xargs -I {} xdg-open {} &)'
+alias la='exa --icons -a --group-directories-first'
+alias ll='exa --icons -lah --group-directories-first'
+alias ls='exa --icons --group-directories-first'
+
+
+alias less='bat --paging=always'
+alias cat='bat --paging=never'
+alias grep='rg'
+alias m='man'
+alias s='sudo'
+alias cd1='cd ..'
+alias cd2='cd ../..'
+alias cd3='cd ../../..'
+alias cd4='cd ../../../..'
+alias cd5='cd ../../../../..'
+alias c='clear'
+
+
+
+alias zz='z -'
+
+
+
+
+alias pdftopng= 'pdftoppm -png'
+alias du='dust'
+alias df='duf'
+# sane default commands
+alias mkdir='mkdir -pv'
+#                   │└─ list created directories
+#                   └─ create intermediate directories
+alias mv='mv -iv'
+#             │└─ list moved files
+#             └─ prompt before overwriting an existing file
+alias cp='cp -iv'
+#             │└─ list copied files
+#             └─ prompt before overwriting an existing file
+
+#-----Tools---------------------------------------------------------
+function myip { echo 'Your ip is:'; curl ipinfo.io/ip }
+function run { "${@}" < /dev/null &> /dev/null &; disown } # independent from shell
+alias mine='sudo chown -R $USER:$USER .'
