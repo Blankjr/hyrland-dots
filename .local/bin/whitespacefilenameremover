@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Loop through each file in the directory
+for file in *; do
+    # Check if the file contains whitespace
+    if [[ "$file" == *" "* ]]; then
+        # Replace whitespace with underscore
+        newfile=$(echo "$file" | tr ' ' '_')
+        # Rename the file
+        mv "$file" "$newfile"
+        echo "Renamed $file to $newfile"
+    fi
+done
