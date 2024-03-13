@@ -68,3 +68,5 @@ set recolor-darkcolor           "#f8f8f2" # Foreground
 #
 set adjust-open width
 set recolor true
+
+set page-padding 300
