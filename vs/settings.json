@@ -1,0 +1,31 @@
+{
+    "workbench.colorTheme": "Eva Dark Italic",
+    "keyboard.dispatch": "keyCode",
+    "cSpell.language": "en,de-DE",
+    "git.autofetch": true,
+    "explorer.confirmDragAndDrop": false,
+    "git.confirmSync": false,
+    "cSpell.enabled": false,
+    "gitlens.currentLine.scrollable": false,
+    "editor.wordWrap": "on",
+    "extensions.experimental.affinity": {
+        "asvetliakov.vscode-neovim": 1
+    },
+    "todo-tree.regex.regex": "((//|#|<!--|;|/\\*|^|%|\\\\)\\s*($TAGS)\\{*|^\\s*- \\[ \\])",
+    "todo-tree.filtering.excludeGlobs": [
+        "**/vendor/**",
+        "**/node_modules/**",
+        "**/dist/**",
+        "**/bower_components/**",
+        "**/build/**",
+        "**/.vscode/**",
+        "**/.github/**",
+        "**/_output/**",
+        "**/*.min.*",
+        "**/*.map"
+    ],
+    "svelte.enable-ts-plugin": true,
+    "editor.formatOnSave": true,
+    "editor.inlineSuggest.suppressSuggestions": true,
+    "cody.telemetry.level": "off"
+}
